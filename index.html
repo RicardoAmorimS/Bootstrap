@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap com sass</title>
+    <!-- Link do bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-image: url("./imagens/backgroundLp.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            color: white;
+        }
+
+        #menu:hover{
+            color: #ff4143;
+        }
+     
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid d-flex flex-row py-2 justify-content-around">
+            <div class="p-2">
+                <h4><a class="nav-link active" aria-current="page" id="menu" href="#"><i
+                    class="bi bi-list"></i> Menu</a></h4>
+            </div>
+            <div class="p-2" style="margin-left: 8%;">
+                <img src="./imagens/logoOneBitDark.png" class="card-img-to img-fluid" style="max-width: 15rem;">
+            </div>
+            
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="p-2" >
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <form role="search">
+                            <div class="input-group">
+
+                                <input type="text" class="form-control"
+                                    id="collapseWidthExample" placeholder="search..."
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                <button class="btn btn-outline-danger" id="search" ><i class="bi bi-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        </div>
+    </nav>
+
+    <!-- Offcanvas -->
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        Link with href
+      </a>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Button with data-bs-target
+      </button>
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <!-- Container do card -->
+    <div class="container px-4 py-5">
+
+        <div class="card mx-auto bg-dark py-2" style="max-width: 35rem; min-height: 43rem;">
+            <h1 class="text-center">Cadastro</h1>
+            <div class="card-body">
+                <div>
+                    <p style="color: white;" class="fs-5">1- Qual seu nome?</p>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Primeiro Nome:</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Segundo Nome:</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div>
+                    <p style="color: white;" class="fs-5">2- Qual seu gênero?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label fs-6" style="color: white;" for="flexRadioDefault1">
+                            Homem
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label fs-6" style="color: white;" for="flexRadioDefault2">
+                            Mulher
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label fs-6" style="color: white;" for="flexRadioDefault2">
+                            Prefiro não informar
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <p style="color: white;" class="fs-5">3- Marque os trinamentos que você fez:</p>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label fs-6" style="color: white;"
+                            for="flexSwitchCheckDefault">Treinamento básico de astronauta</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label fs-6" style="color: white;"
+                            for="flexSwitchCheckDefault">Treinamento físico básico</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label fs-6" style="color: white;"
+                            for="flexSwitchCheckDefault">Treinamento avançado de astronauta</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label fs-6" style="color: white;"
+                            for="flexSwitchCheckDefault">Treinamento físico intenso</label>
+                    </div>
+                </div>
+
+                <div>
+                    <p style="color: white;" class="fs-5">4- Quais são suas qualidades?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label style="color: white;" class="form-check-label" for="inlineCheckbox1">Proativo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label style="color: white;" class="form-check-label" for="inlineCheckbox2">Resistente</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
+                        <label style="color: white;" class="form-check-label" for="inlineCheckbox1">Não vomito
+                            fácil</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+                        <label style="color: white;" class="form-check-label" for="inlineCheckbox2">Não temo
+                            marciano</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
+                        <label style="color: white;" class="form-check-label" for="inlineCheckbox2">Já vi todos os Star
+                            Wars</label>
+                    </div>
+                </div>
+
+                <div style="text-align: center;" class="mt-4">
+                    <button class="btn btn-outline-danger" id="liveAlertBtn"><i class="bi bi-send-fill"></i>
+                        Enviar</button>
+                </div>
+
+                <div id="liveAlertPlaceholder" class="mt-2"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- container footer -->
+    <div class="container text-center footer mt-4">
+        <p style="color: white;">Feito por Ricardo Amorim &copy; OneBitCode todos os direitos reservados - 2021</p>
+    </div>
+
+    <!-- Script bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+        const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div><i class="bi bi-check-circle-fill"></i> ${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                alert('Dados enviados com sucesso', 'success')
+            })
+        }
+    </script>
+</body>
+
+</html>
