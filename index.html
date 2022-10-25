@@ -19,8 +19,8 @@
             color: white;
         }
 
-        #menu:hover{
-            color: #ff4143;
+        .menu:hover{
+            color: #ff0043;
         }
      
     </style>
@@ -31,11 +31,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid d-flex flex-row py-2 justify-content-around">
             <div class="p-2">
-                <h4><a class="nav-link active" aria-current="page" id="menu" href="#"><i
+                <h4><a class="nav-link active menu"   data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i
                     class="bi bi-list"></i> Menu</a></h4>
             </div>
             <div class="p-2" style="margin-left: 8%;">
-                <img src="./imagens/logoOneBitDark.png" class="card-img-to img-fluid" style="max-width: 15rem;">
+                <img src="./imagens/logoOneBitDark.png" class="img-fluid" style="max-width: 15rem;">
             </div>
             
 
@@ -67,32 +67,31 @@
     </nav>
 
     <!-- Offcanvas -->
-    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-        Link with href
-      </a>
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        Button with data-bs-target
-      </button>
       
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h4 class="offcanvas-title" id="offcanvasExampleLabel">Menu Offcanvas</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+            <h5><a class="nav-link active menu my-3" href=""><i class="bi bi-house-door"></i> Home</a></h5>
           </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <hr>
+          <div>
+            <h5><a class="nav-link active menu my-3" href=""><i class="bi bi-person"></i> Minha Conta</a></h5>
           </div>
+          <hr>
+          <div>
+            <h5><a class="nav-link active menu my-3" href=""><i class="bi bi-gear"></i> Configurações</a></h5>
+          </div>
+          <hr>
+          <div>
+            <h5><a class="nav-link active menu my-3" href=""><i class="bi bi-people"></i> Grupos</a></h5>
+          </div>
+          <hr>
+
+          
         </div>
       </div>
 
